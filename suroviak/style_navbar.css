@@ -1,0 +1,36 @@
+/* Základní styl pro navbar */
+.navbar {
+    background-color: #333; /* tmavě šedé pozadí */
+    overflow: hidden; /* zajišťuje, že obsah nepřetéká */
+    position: fixed; /* lišta zůstane nahoře při scrollování */
+    width: 100%; /* lišta zabírá celou šířku obrazovky */
+    top: 0; /* umístění na vrch */
+    z-index: 1000; /* zajistí, že lišta bude nad ostatním obsahem */
+  }
+  
+  /* Styl pro položky v navbaru */
+  .navbar a {
+    float: left; /* umístění položek vedle sebe */
+    display: block;
+    color: white; /* bílý text */
+    text-align: center; /* zarovnání textu na střed */
+    padding: 14px 20px; /* prostor kolem textu */
+    text-decoration: none; /* odstraní podtržení */
+  }
+  
+  /* Hover efekt na položky */
+  .navbar a:hover {
+    background-color: #ddd; /* světle šedé pozadí při najetí */
+    color: black; /* černý text při najetí */
+  }
+  
+  /* Responsivní design pro menší obrazovky */
+  @media screen and (max-width: 600px) {
+    .navbar a {
+      float: none; /* položky se zarovnají pod sebe */
+      width: 100%; /* každá položka zabere celou šířku */
+      text-align: left; /* zarovnání textu vlevo */
+    }
+  }
+
+  
