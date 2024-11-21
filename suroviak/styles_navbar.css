@@ -1,0 +1,69 @@
+/* Základní styl pro navbar */
+.navbar {
+    background-color: #333; /* tmavě šedé pozadí */
+    position: fixed; /* lišta zůstane nahoře při scrollování */
+    top: 0; /* umístění na vrch */
+    width: 100%; /* lišta zabírá celou šířku obrazovky */
+    z-index: 1000; /* zajistí, že lišta bude nad ostatním obsahem */
+    display: flex; /* použijeme flexbox pro snadné zarovnání */
+    justify-content: space-evenly; /* rovnoměrně rozmístí položky */
+    align-items: center; /* vertikálně zarovná položky */
+    padding: 10px 0; /* vnitřní okraje pro lepší vzhled */
+  }
+  
+  /* Styl pro položky v navbaru */
+  .navbar a {
+    color: white; /* bílý text */
+    text-align: center; /* zarovnání textu na střed */
+    padding: 14px 20px; /* prostor kolem textu */
+    text-decoration: none; /* odstraní podtržení */
+    transition: background-color 0.3s, color 0.3s; /* plynulý přechod pro hover */
+    font-size: 16px; /* velikost písma */
+  }
+  
+  /* Hover efekt na položky */
+  .navbar a:hover {
+    background-color: #ddd; /* světle šedé pozadí při najetí */
+    color: black; /* černý text při najetí */
+  }
+  
+  /* Responsivní design pro menší obrazovky */
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column; /* položky se zarovnají pod sebe */
+      align-items: flex-start; /* zarovnání položek na začátek */
+    }
+    
+    .navbar a {
+      width: 100%; /* každá položka zabere celou šířku */
+      text-align: left; /* zarovnání textu vlevo */
+      padding: 12px 20px; /* zvětšený padding pro lepší klikání */
+      font-size: 18px; /* větší písmo na mobilních zařízeních */
+    }
+  }
+  
+  /* Třída pro hamburger menu */
+  .navbar .icon {
+    display: none; /* skryje hamburger menu na velkých obrazovkách */
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Mobilní verze s hamburger menu */
+  @media screen and (max-width: 600px) {
+    .navbar a {
+      display: none; /* skryje odkazy na malých obrazovkách */
+      width: 100%;
+    }
+    
+    .navbar.responsive a {
+      display: block; /* zobrazuje odkazy po kliknutí na hamburger menu */
+    }
+  
+    .navbar.responsive .icon {
+      display: block; /* zobrazí hamburger ikonu */
+    }
+  }
+  
+
+  
